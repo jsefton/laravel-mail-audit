@@ -1,0 +1,33 @@
+{
+  "name": "jsefton/laravel-mail-audit",
+  "type": "library",
+  "description": "Store logs in the database of all mail sent and its status for auditing",
+  "homepage": "https://jamie-sefton.co.uk",
+  "license": "MIT",
+  "require": {
+    "laravel/framework": ">=7.0"
+  },
+  "archive": {
+    "exclude": [
+      "/tests",
+      "tests",
+      "tests/*.*",
+      "phpunit.xml",
+      ".gitignore",
+      ".gitattributes",
+      "README.md"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "MailAudit\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MailAudit\\MailAuditServiceProvider"
+      ]
+    }
+  }
+}
