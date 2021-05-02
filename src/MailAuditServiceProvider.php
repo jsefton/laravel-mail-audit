@@ -6,19 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class MailAuditServiceProvider extends ServiceProvider
 {
-    /**
-     * The event listener mappings for the application.
-     *
-     * @var array
-     */
-    protected $listen = [
-        'Illuminate\Mail\Events\MessageSending' => [
-            'App\Listeners\EmailSending',
-        ],
-        'Illuminate\Mail\Events\MessageSent' => [
-            'App\Listeners\EmailSent',
-        ],
-    ];
+
     /**
      * Register any application services.
      *
@@ -26,7 +14,7 @@ class MailAuditServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->register(EventMailAuditServiceProvider::class);
     }
 
     /**
