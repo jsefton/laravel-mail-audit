@@ -16,6 +16,7 @@ Able to store and provide:
 
 ## Installation
 
+
 ```bash
 composer require jsefton/laravel-mail-audit
 ```
@@ -28,3 +29,5 @@ php artisan migrate
 This package will automatically register the event listeners and data will be inserted within the 'email_audits' table.
 
 An eloquent model exists if you wish to query the data back out as: `MailAudit\EmailAudit`
+
+Please note currently for Laravel 7+ until tested and verified in lower versions.
